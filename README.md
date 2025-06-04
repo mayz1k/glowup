@@ -1,2 +1,0 @@
-# glowup
-my dissertation
