@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intital-scale=1.0">
+    <title>Glow up</title>
+    <link rel="ICON" href="images/logo.png" type="image/logo">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="style/appointment.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo" href="home.html">
+            <img src="images/logo.png" width="100" height="100" alt="Logo">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="about.html">О нас</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="service.html">Услуги</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="reviews.html">Отзывы</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="contact.html">Контакты</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="appointment.html">Запись</a>
+                  </li>
+                </ul>
+             </nav>
+          </div>
+      </div>
+  </header>
+<main>
+    <section>
+        <h2>Выберите услугу и заполните форму</h2>
+        
+        <form id="appointment-form" action="process_appointment.php" method="POST">
+            <div id="notification" class="alert success" style="display: none;">
+            Запись успешно отправлена!
+            </div>
+            <div id="error" class="alert error" style="display: none;">
+            Произошла ошибка при отправке формы. Попробуйте позже.
+            </div>
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Введите ваш номер телефона">
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required placeholder="Введите вашу почту">
+            </div>
+            <div class="form-group">
+                <label for="service">Выберите услугу:</label>
+                <select type="text" id="service" name="service" required>
+                    <option value="haircut">Стрижка</option>
+                    <option value="manicure">Маникюр</option>
+                    <option value="massage">Массаж</option>
+                    <option value="facial">Косметологические процедуры</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time">Дата и время записи:</label>
+                <input type="datetime-local" id="time" name="time" required>
+            </div>
+            <input type="submit" value="Записаться">
+            <div id="success-message" class="alert success" style="display:none;">
+            Запись успешно отправлена!
+            </div>
+        </form>
+    </section>
+
+
+    <section>
+        <h2>Наши услуги</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Стрижка</h3>
+                <p>Профессиональные стрижки для любой длины и типа волос.</p>
+                <button>Записаться</button>
+            </div>
+            <div class="service-item">
+                <h3>Маникюр</h3>
+                <p>Услуги маникюра, включая классический и дизайн ногтей.</p>
+                <button>Записаться</button>
+            </div>
+            <div class="service-item">
+                <h3>Массаж</h3>
+                <p>Расслабляющий и лечебный массаж для вашего комфорта.</p>
+                <button>Записаться</button>
+            </div>
+        </div>
+    </section>
+</main>
+            <footer>
+                <p>&copy; 2025 Салон красоты "Glow Up". Все права защищены.</p>
+            </footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+if (params.get("success") === "1") {
+    document.getElementById("notification").style.display = "block";
+}
+if (params.get("error") === "1") {
+    document.getElementById("error").style.display = "block";
+}
+</script>
+</body>
+</html>

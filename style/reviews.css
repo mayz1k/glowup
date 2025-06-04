@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+   }
+
+   body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/stock.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif; 
+   }
+
+
+   .container {
+    max-width: 1190px;
+    padding: 0 15px; 
+    margin: 0 auto; 
+   }
+
+   .header {
+    padding-top: 35px; 
+    background-color: white
+   }
+
+   .header__inner {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+   }
+
+
+   .menu__list {
+    display: flex; 
+    list-style: none; 
+   }
+
+   .menu__list-item {
+    margin-right: 20px; 
+   }
+
+   .menu__list-link {
+    padding: 10px 20px; 
+    font-size: 20px; 
+    color: #2c2c2c; 
+    cursor: pointer; 
+    transition: all 0.3s; 
+   }
+   .menu__list-link:hover {
+    color: #9c29e9; 
+   }
+
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h1, h2 {
+    color: #9c29e9;
+}
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.review:last-child {
+    border-bottom: none;
+}
+.review p {
+    margin: 5px 0;
+}
+.review strong {
+    color: #9c29e9;
+}
+
+
+
+    .section_label {
+    display: block;
+    margin-bottom: 0.6rem;
+
+}
+
+    .section_input {
+    margin: 0 auto;
+    display: block;
+    width: 10%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+   footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:80px;
+    width:100%;
+}
