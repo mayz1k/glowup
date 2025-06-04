@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /admin/
 Allow: /
-Sitemap: https://glowup-salon.ru/sitemap.xml
+
+Sitemap: https://mayz1k.github.io/glowup/sitemap.xml
